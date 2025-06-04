@@ -1,0 +1,59 @@
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# === Build Directories ===
+/bin/
+/build/
+/target/
+/out/
+
+# === Tomcat Files ===
+*.log
+work/
+temp/
+logs/
+webapps/*
+
+# Ignore Tomcat-specific deployment files
+*/tomcat/work/
+*/tomcat/logs/
+*/tomcat/temp/
+*/tomcat/webapps/ROOT/
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+out/
+
+# === Eclipse ===
+*.classpath
+*.project
+*.settings/
+
+# === NetBeans ===
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# === MySQL Dumps (optional) ===
+*.sql
+*.dump
+*.db
+
+# === OS Specific ===
+.DS_Store
+Thumbs.db
+
+# === Misc ===
+*.swp
+*~
+*.bak
+*.tmp
