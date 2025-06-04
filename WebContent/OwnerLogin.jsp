@@ -145,7 +145,7 @@
           
             <input type="text" name="email" class="form-control" id="email"   placeholder="abc@gmail.com" required>
             <br>
-           <input type="password" name="pass" class="form-control" id="pass"   placeholder="enter password"  required data-validation-required-message="Please enter your password!">
+           <input type="password" name="password" class="form-control" id="password"   placeholder="enter password"  required data-validation-required-message="Please enter your password!">
             <br><div class="text-center">
              <button class="button"  button name="login"  type="submit" value="login">Login</button>
                <!-- <button class="button" button name="login"  type="submit" value="login">login</button> -->

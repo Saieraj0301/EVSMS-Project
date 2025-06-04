@@ -54,9 +54,18 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-        <!--   <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">User</a></li>
-          <li><a class="nav-link scrollto" href="#services">Admin</a></li> -->
+          <li><a class="nav-link scrollto" href="OwnerHome.jsp">Home</a></li>
+          <li><a class="nav-link scrollto" href="CreateEVStation.jsp">Create EV Station</a></li>
+          <li><a class="nav-link scrollto active" href="ViewEVStationdetails.jsp">ManageStationDetails</a></li>
+           <!-- <li><a class="nav-link scrollto" href="ViewRechargeslots.jsp">ManageRechageSlots</a></li>
+         -->  <li class="dropdown"><a href="#"><span>Welcome<%response.setContentType("text/html");  
+				 HttpSession sessio=request.getSession(true);  
+	               if(session!=null){  
+	               String name=(String)session.getAttribute("name");  
+	                out.print(" "+name+""); }   %></span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                                       
+              <li><a href="Home.jsp">Logout</a></li> 
           <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -86,14 +95,13 @@
     </div>
   </header><!-- End Header -->
 
- 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio"><br><br>
-    <div class="portfolio">
+    <section id="contact" class="contact" style="background-image: url(assets/img/view1.jpg)"><br><br>
+    <div class="contact" >
       <div class="container" data-aos="fade-up" >
 
         <div class="section-title">
-          <h2 style="color:#fff;">User Register Details</h2>
+          <h2> EV Station Details</h2>
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p> -->
         </div>
         
@@ -116,7 +124,7 @@
                      <%
                      Connection con=DBConnection.getConnection();
                      Statement st=con.createStatement();
-                     ResultSet rs=st.executeQuery("select * from user");
+                     ResultSet rs=st.executeQuery("select * from create_evstation");
                      //while(rs.next())
                      if(rs.next() == false) {
                     	%>
@@ -129,11 +137,14 @@
                     	 if(count == 0) {	
                     	 %>
                     	 <tr  class="danger" style="color:black">
-                    	  <th>Username</th>
-		                  <th>Phoneno</th>
-		                     <th>Email</th>
-		                      <th>Location</th>
+                    	  <th>Owner Name</th>
+		                  <th>Address</th>
 		                     <th>Area</th>
+		                      <th>City</th>
+		                     <th>Path</th>
+		                      <th>Mobile No</th>
+		                     <th>Slot</th>
+		                     <th>Capacity</th>
 						 <th>Delete</th> 
 		                  </tr>
 		                  <%}%>
@@ -143,10 +154,13 @@
                     	  <td style="color:black"><%=rs.getString(3) %></td> 
                     	<td style="color:black"><%=rs.getString(4) %></td> 
                     	<td style="color:black"><%=rs.getString(5) %></td> 
-                    	<td style="color:black"><%=rs.getString(6) %></td>
+                    	<td style="color:black"><a style="color:green;" href="<%=rs.getString(6) %>">View</a></td>
+                    	<td style="color:black"><%=rs.getString(7) %></td> 
+                    	<td style="color:black"><%=rs.getString(8) %></td> 
+                    	<td style="color:black"><%=rs.getString(9) %></td>
                     	<%-- <td style="color:black"><a href="<%=rs.getString(4) %>" style="color:blue;"><%=rs.getString(4) %></a></td> --%>
                     	
-                    	 <td><a style="color:red;" href="DeleteMeetingLinkCon?id=<%=rs.getInt(1)%>"><b>Delete</b></a></td>
+                    	 <td><a style="color:red;" href="DeleteEVStationCon?id=<%=rs.getInt(1)%>"><b>Delete</b></a></td>
                     	 </TR>                    	 
                     <%count++; }while(rs.next());}%> 
                    
@@ -154,8 +168,7 @@
                   </form>
 						</div></div></div>
          </div>
-</div>
-     </section>
+</div></section>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

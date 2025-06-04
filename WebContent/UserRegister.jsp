@@ -147,44 +147,23 @@
             <div class="icon-box" data-aos="fade-up">
             <h1 class="bx bx-user"> User Registration</h1><br>
             <br>
-             <form action="UserRegisterServlet" method="post" >
+             <form action="UserRegistrationController" method="post" >
            
           <input type="text" name="name" class="form-control" id="name"   placeholder="Enter Your Name" required>
           <br>
-          <input type="text" name="phoneno" class="form-control" id="phoneno"  required pattern="[7-9]{1}[0-9]{9}" title="Mobile number must be starts with 7, 8 or 9 digit and total number of digits are 10"  placeholder="Enter Your PhoneNo" required>
+           <input type="text" name="address" class="form-control" id="address" placeholder="Your address" required>
+           <br>
+              <input type="date" name="dob" class="form-control" id="dob" placeholder="Your Date of Birth" required>
+           <br>
+              <input type="text" name="mobileno" class="form-control" id="mobileno" required pattern="[7-9]{1}[0-9]{9}" placeholder="Your Mobile Number" required>
           <br>
-           <input type="text" name="email" class="form-control" id="email"   placeholder="abc@gmail.com" required> <br>
-           <input type="text" name="location" class="form-control" id="location"   placeholder="enter location" required> <br>
-           <input type="text" name="area" class="form-control" id="area"   placeholder="enter area" required> <br>
-          	<input type="password" name="pass" class="form-control" id="pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." placeholder="enter password" >
-          <!-- <textarea name="address" rows="3" class="form-control" id="Address"   placeholder="Enter Your Address( mention your full address (state/district/pincode)" required></textarea>
-            <br><label class="form-control">Enter Your Date of Birth:
-             <input type="Date" name="dob" class="form-control" id="DOB" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" title="Date should be month-day-year format (ex. 03/22/1990)" required="required"  placeholder="DOB" required></label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
             <br>
-            <label for="gender" class="form-control" >Gender:
-            <input type="radio"   name="gender" value="male" >Male 
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio"  name="gender" value="other">Other 
-             </label> 
-<br>
-
-<input type="text" name="bankholdername" class="form-control" id="bankholdername"   placeholder="Enter bank holdername" required>
-            <br>
-            <input type="text" name="bankname" class="form-control" id="bankname"   placeholder="Enter bank name" required><br>
-             <input type="text" name="bankbranch" class="form-control" id="bankbranch"   placeholder="Enter branch name" required><br>
-             <input type="text" name="bankaccountno" class="form-control" id="bankaccountno"   placeholder=" Enter bank account no" required><br>
-             <input type="text" name="ifsccode" class="form-control" id="ifsccode"  placeholder="Enter IFSC code" required><br>
-              <input type="text" name="aadharno" class="form-control" id="aadharno"   placeholder="Enter Aadhar Card No" required><br>
-          <input type="text" name="email" class="form-control" id="uname"   placeholder="abc@gmail.com" required> <br>
-          	<input type="password" name="pass" class="form-control" id="uname" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." placeholder="enter password" >
-            <br> --><br>
-             <!--  <input type="file" name="file" class="form-control" id="file"   placeholder="upload Adhar card" required><br> -->
+              <input type="password" name="password" class="form-control" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="Your password" required>
+          <br>
+          
             <div class="text-center">
-             <button type="submit"  class="button" value="login" >Submit</button> <!-- <a href="UserLogin.jsp" class="get-started-btn scrollto">Login</a>
-              <p><i>Already registered? Please login Here!!!</i></p> -->
-             <!--  <button name="login"  type="submit" value="login">Submit</button> -->
-                   <!-- <button name="reset"  type="reset" >Cancel</button><br><br> -->
-                   
+             <button type="submit"  class="button" value="login" >Submit</button> 
 			</div>
 			</form>
 			</div>

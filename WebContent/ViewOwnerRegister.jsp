@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="com.connection.DBconnection"%>
+<%@page import="com.connection.DBConnection"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %> 
@@ -410,7 +410,7 @@
       <div class="container" data-aos="fade-up" >
 
         <div class="section-title">
-          <h2>Manage Bunk Details</h2>
+          <h2>Owner Details</h2>
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p> -->
         </div>
         
@@ -431,9 +431,9 @@
                     <table class="table table-bordered" style="color:black">
                    
                      <%
-                     Connection con=DBconnection.getConnection();
+                     Connection con=DBConnection.getConnection();
                      Statement st=con.createStatement();
-                     ResultSet rs=st.executeQuery("select * from ev_bunk");
+                     ResultSet rs=st.executeQuery("select * from owner");
                      //while(rs.next())
                      if(rs.next() == false) {
                     	%>
@@ -446,25 +446,21 @@
                     	 if(count == 0) {	
                     	 %>
                     	 <tr  class="danger" style="color:black">
-                    	  <th>Meetingid</th>
-		                  <th> link Record</th>
-		                     <th>class</th>
-		                     <!-- <th>Time</th>
-		                     <th>Link</th>
-		                 <th>Join</th> -->
-		                 
+                    	  <th>Name</th>
+		                  <th> Address</th>
+		                     <th>Email</th>
+		                      <th>Mobile No</th>
+		                     <th>DOB</th>	                
 		                      <th>Action</th> 
-		                      <th>Delete</th> 
-		                  </tr>
+		                     </tr>
 		                  <%}%>
                     	 <TR>
                     	 <%-- <td style="color:black"><%=rs.getString(1) %></td> --%>
                     	 <td style="color:black"><%=rs.getString(2) %></td>
                     	  <td style="color:black"><%=rs.getString(3) %></td> 
-                    	<%--  <td style="color:black"><%=rs.getString(4) %></td> --%>
-                    	<%--  <td style="color:black"><%=rs.getString(5) %></td> --%>
-                    	<%--  <td style="color:black"><a href="<%=rs.getString(4) %>" style="color:blue;"><%=rs.getString(4) %></a></td> --%>
-                    	
+                    	 <td style="color:black"><%=rs.getString(4) %></td>
+                    	 <td style="color:black"><%=rs.getString(5) %></td>
+                    	  <td style="color:black"><%=rs.getString(6) %></td>
                     	 <td><a style="color:red;" href="DeleteMeetingLinkCon?id=<%=rs.getInt(1)%>"><b>Delete</b></a></td>
                     	 </TR>                    	 
                     <%count++; }while(rs.next());}%> 

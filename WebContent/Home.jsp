@@ -50,7 +50,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="Home.jsp">Home</a></li>
           <li><a class="nav-link scrollto" href="UserLogin.jsp">User</a></li>
-          <li><a class="nav-link scrollto" href="OwnerLogin.jsp">Owner Of EVChargetation</a></li>
+          <li><a class="nav-link scrollto" href="OwnerLogin.jsp">Owner Of EVChargeStation</a></li>
            <li><a class="nav-link scrollto" href="AdminLogin.jsp">Admin</a></li>
           <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -77,7 +77,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Home.jsp" class="get-started-btn scrollto">Get Started</a>
+      <a href="UserLogin.jsp" class="get-started-btn scrollto">Get Started</a>
     </div>
   </header><!-- End Header -->
 

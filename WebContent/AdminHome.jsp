@@ -57,12 +57,18 @@
 	                </ul>
          </li> 
           <li class="dropdown">
+          <a style="color:black;">Welcome Admin<i class="bi bi-chevron-down"></i></a>
+	                <ul>
+	                <li class="dropdown"><a class="nav-link scrollto" href="LogoutController" style="color:black;">Logout</a></li>
+	                </ul>
+         </li> 
+          <!-- <li class="dropdown">
           <a style="color:black;">View EVChargeVehicle Details<i class="bi bi-chevron-down"></i></a>
 	                <ul>
 	                <li class="dropdown"><a class="nav-link scrollto" href="ViewBunkdetails.jsp" style="color:black;">Bunk Details</a></li>
 	                <li class="dropdown"><a class="nav-link scrollto" href="ViewManagedetails.jsp" style="color:black;">Manage Slots</a></li>
 	                </ul>
-         </li> 
+         </li>  -->
           <!-- <li><a class="nav-link scrollto" href="ViewAllUser.jsp">ViewUserRegister</a></li>
           <li><a class="nav-link scrollto" href="ViewAlladmin.jsp">ViewAdminRegister</a></li>
           <li><a class="nav-link scrollto" href="ViewAlladmin.jsp">ViewAllVehicleData</a></li> -->
@@ -91,7 +97,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="Home.jsp" class="get-started-btn scrollto">Get Started</a>
+    
     </div>
   </header><!-- End Header -->
 
