@@ -1,4 +1,4 @@
-ELECTRIC VEHICLE STATION MANAGEMENT SYSTEM (EVSMS)
+ELECTRIC VEHICLE CHARGING STATION MANAGEMENT SYSTEM (EVCSMS)
 
 This document provides step-by-step instructions to set up and run the Electric Vehicle Station Management System project using Java, Apache Tomcat, MySQL, Eclipse IDE, and MySQL Query Browser.
 
